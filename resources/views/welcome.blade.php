@@ -54,7 +54,13 @@
                         <hr class="blue-bar">
                         <p>Syntax Is Not Programming - Marcus Fulbright at 8pm on Tuesday, August 8.</p>
                     </div>
-                    <div class="event-img"><svg width="319px" height="299.6px"><defs><clipPath id="myClip"><path d="M0,0 0,241 58.6,299.6 319,299.6 319,51.1 267.9,0 "/></clipPath></defs></svg></div>
+                    <div class="event-img">
+                        <svg width="319px" height="299.6px">
+                            <clipPath id="myClip">
+                                <path d="M0,0 0,241 58.6,299.6 319,299.6 319,51.1 267.9,0 "/>
+                            </clipPath>
+                        </svg>
+                    </div>
                     <button class="nash-btn mt-5">More details and RSVP</button>
                 </div>
             </div>

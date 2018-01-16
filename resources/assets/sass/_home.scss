@@ -358,6 +358,9 @@
     top: 80px;
     right: -28%;
 
+    // Force hardware acceleration to make clip-path work in Safari.
+    // See here: https://stackoverflow.com/questions/28468314/svg-clippath-to-clip-a-div-doesnt-work-in-safari-when-i-duplicate-it#comment47845738_28468314
+    -webkit-transform:translate3d(0, 0, 0);
 }
 
 @media (min-width: 450px) {
