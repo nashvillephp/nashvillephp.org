@@ -3,7 +3,9 @@
 /.vagrant
 /build
 /node_modules
+/public/browserconfig.xml
 /public/css
+/public/favicon*
 /public/hot
 /public/images
 /public/js

@@ -24,7 +24,8 @@ mix
         'bootstrap'
     ])
     .sass('resources/assets/sass/app.scss', 'public/css')
-    .copyDirectory('resources/assets/images', 'public/images');
+    .copyDirectory('resources/assets/images', 'public/images')
+    .copyDirectory('resources/assets/favicon', 'public');
 
 if (mix.inProduction()) {
     mix
