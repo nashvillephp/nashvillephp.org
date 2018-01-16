@@ -1,0 +1,438 @@
+// VARIABLES
+$blue: #6B11FF;
+$yellow: #FFD700;
+$gray-dark: #4C575B;
+$gray: #606C72;
+$gray-light: #E5E8EA;
+$gray-lightest: #F2F5F7;
+
+
+// GENERAL
+
+.transit-02 {
+    transition: all 0.2s ease;
+}
+
+@media (max-width: 991px) {
+    .mb-5-r {
+        margin-bottom: 3rem;
+    }
+}
+
+// NAVBAR
+
+.nash-nav {
+    justify-content: space-between;
+    background-color: $blue;
+    @extend .text-sm;
+    text-transform: uppercase;
+    padding: 40px;
+    display: flex;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        line-height: 60px;
+        float: right;
+    }
+
+    li {
+        position: relative;
+        z-index: 1000;
+        float: left;
+        margin-right: 1rem;
+        letter-spacing: 0.1rem;
+
+        a {
+            color: white;
+
+
+            &:hover {
+                padding-bottom: 5px;
+                border-bottom: $yellow 4px solid;
+                @extend .transit-02;
+            }
+        }
+    }
+
+}
+
+
+.nash-nav-logo {
+    height: 60px;
+    background-image: url('../images/logo-nashphp-bluebg.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 106px;
+}
+
+.nav-menu-toggle {
+    z-index: 20;
+    display: none;
+    background-color: transparent;
+    border: 0;
+    height: 28px;
+    width: 28px;
+    background-image: url(../images/toggle-menu-on.svg);
+    background-repeat: no-repeat;
+}
+
+.nav-menu-toggle.activate {
+    background-image: url(../images/toggle-menu-off.svg);
+}
+
+
+@media (max-width: 767px) {
+
+    .nav-menu-toggle {
+        display: block;
+        z-index: 1020;
+    }
+    .nash-nav-logo {
+        background-image: url('../images/logo-nashphp-hor.svg');
+        height: 25px;
+        width: 189px;
+    }
+    .nav-menu {
+        position: absolute;
+        background-color: $gray-dark;
+        min-width: 190px;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        z-index: 10;
+        display: none;
+        margin-right: 0px;
+        animation: nash-nav2 0.3s;
+        animation-fill-mode: forwards;
+        z-index: 1000;
+    }
+
+    .nav-menu.activate {
+        display: block;
+        margin-right: -191px;
+        animation: nash-nav 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    .nav-menu.block {
+        display: block !important ;
+    }
+
+
+    .nash-nav {
+
+        ul {
+            text-align: right;
+            margin: 5rem 40px;
+            line-height: 50px;
+        }
+        li {
+            float: initial;
+            margin-right: 0;
+        }
+    }
+}
+
+
+@keyframes nash-nav {
+    to {
+        margin-right: 0;
+    }
+}
+@keyframes nash-nav2 {
+    to {
+        margin-right: -191px;
+    }
+}
+
+
+
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Saira+Semi+Condensed:300,400,500,600,700,800,900');
+$text: 'Saira Semi Condensed', sans-serif;
+$code: 'Inconsolata', monospace;
+
+.text-xs {
+    font-size: 56%;
+    font-weight: 400;
+    letter-spacing: 0.07rem;
+    line-height: 0.8rem;
+}
+
+.text-sm {
+    font-size: 70%;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.text-md {
+    font-size: 100%;
+    font-weight: 400;
+}
+
+
+html {
+    font-size: 17px;
+    font-family: $text;
+
+}
+
+body {
+    font-family: $text;
+    font-size: 1rem;
+    color: $gray;
+    margin: 0;
+    font-weight: 400;
+    background-color: $gray-lightest;
+}
+
+
+pre {
+    color: $gray;
+    font-family: $code;
+    font-size: 1rem;
+}
+
+button {
+    font-family: $text;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: $blue;
+    @extend .transit-02;
+
+    &:hover {
+        text-decoration: none;
+        color: $yellow;
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    color: $blue;
+}
+
+h1, .h1 {
+    font-weight: 600;
+    font-size: 2.7rem;
+    margin-bottom: 1.3rem;
+    line-height: 2.7rem;
+}
+
+h2, .h2 {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h3, .h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+h4, .h4 {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+p,div {
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.text-box {
+    display: block;
+    max-width: 720px;
+    margin: auto;
+}
+
+@media (min-width: 971px) {
+    .text-box-sm {
+        max-width: 423px;
+    }
+    .text-box-xs {
+        max-width: 350px;
+    }
+}
+
+
+.blue-bar {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid $blue;
+    width: 36px;
+    display: inline-block;
+}
+
+.white-bar {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 5px solid white;
+    width: 36px;
+    display: inline-block;
+}
+
+small {
+    font-size: 0.85rem;
+    letter-spacing: 0.03rem;
+}
+
+// BACKGROUNDS
+.bg-blue {
+    background-color: $blue;
+}
+.bg-gray {
+    background-color: $gray;
+}
+
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-blue, .bg-gray {
+    color: white;
+
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5 {
+        color: white;
+    }
+
+}
+
+// BUTTONS
+button:focus {outline:0;}
+
+.nash-btn {
+    color: white;
+    background-color: $blue;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.025rem;
+    padding: 0.7rem 2.3rem 0.7rem 1rem;
+    position: relative;
+    text-align: left;
+
+    -webkit-box-shadow: 9px 9px 0px 0px $gray-light;
+    -moz-box-shadow: 9px 9px 0px 0px $gray-light;
+    box-shadow: 9px 9px 0px 0px $gray-light;
+    transition: all 0.1s ease;
+
+    &:hover {
+    -webkit-box-shadow: 6px 6px 0px 0px $gray-light;
+    -moz-box-shadow: 6px 6px 0px 0px $gray-light;
+    box-shadow: 6px 6px 0px 0px $gray-light;
+    }
+
+    &:focus, &:active {
+        &:before {
+            animation: btn-nash 1s;
+        }
+    }
+
+    &:before {
+        position: absolute;
+        display: block;
+        width: 0.75rem;
+        z-index: 1000;
+        bottom: 0.5rem;
+        right: 0.8rem;
+        content: url(../images/icon-arrow-right.svg);
+    }
+}
+
+@keyframes btn-nash {
+    to {
+        right: 0rem;
+        opacity: 0;
+    }
+}
+
+// FOOTER
+footer {
+    position: relative;
+    z-index: 0;
+
+    .footer-menu {
+        display: flex;
+
+        ul {
+            list-style: none;
+            margin: 0 0 0.8rem;
+            padding: 0;
+        }
+
+        li {
+            position: relative;
+            z-index: 1000;
+            float: left;
+            margin-right: 1rem;
+
+            a {
+                color: $gray;
+                @extend .text-sm;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+
+
+                &:hover {
+                    color: $blue;
+                    @extend .transit-02;
+                }
+            }
+        }
+    }
+
+    .logo-nash {
+        width: 73px;
+        margin-bottom: 9rem;
+    }
+
+    p {
+        @extend .text-xs;
+        margin-bottom: 0;
+    }
+}
+
+.nash-sponsor {
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+    text-align: center;
+    width: 125px;
+    padding-right: 15px;
+    img {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    z-index: 2;
+}
+
+.nash-credits {
+    margin: 3rem 0;
+}
+.footer-angle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    max-width: 580px;
+}
+
+@media (max-width: 767px) {
+    .footer-angle {
+        display: none;
+    }
+
+}

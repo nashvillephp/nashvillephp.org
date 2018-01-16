@@ -1,0 +1,383 @@
+.art-img-cont {
+    background: url(../images/angle-light.svg), $blue;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: auto;
+}
+
+.art-img {
+    position: relative;
+    background: white; /* Old browsers */
+    background: -moz-linear-gradient(top, $yellow 0%, $blue 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $yellow 0%,$blue 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $yellow 0%,$blue 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$yellow', endColorstr='$blue',GradientType=0 ); /* IE6-9 */  display: block;
+    width: 100%;
+    height: 450px ;
+}
+.art-img::after {
+    content: "";
+    background: url(../images/placeholder02.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.img-arrows {
+    position: absolute;
+    width: 160px;
+    z-index: 1000;
+    right: -130px;
+    top: 80px;
+}
+
+.art-content-cont {
+    background-image: url(../images/angle-blue1.svg);
+    background-repeat: no-repeat;
+    background-position: -80% -1%;
+    background-size: 70%;
+}
+
+@media (min-width: 1460px) {
+    .img-arrows {
+        display: none;
+    }
+}
+@media (max-width: 1060px) {
+    .img-arrows {
+        display: none;
+    }
+}
+@media (max-width: 1100px) {
+    .art-content-cont {
+        background-position: -100% -1%;
+    }
+}
+@media (min-width: 1300px) {
+    .art-content-cont {
+        background-position: -60% -1%;
+    }
+}
+
+@media (max-width: 991px) {
+    .art-social-left {
+        display: none;
+    }
+    .art-content-cont {
+        margin-top: -1px;
+    }
+}
+
+.art-social-left {
+    padding-top: 4.5rem;
+    text-align: center;
+    width: 30px;
+    p {
+        margin-bottom: 2.5rem;
+    }
+}
+
+.social-twitter {
+    height: 28px;
+}
+
+.social-facebook {
+    height: 33px;
+}
+
+.social-google {
+    height: 27px;
+}
+
+
+@media (min-width: 1600px) {
+    .art-img-cont {
+        background: $blue;
+    }
+    .art-content-cont {
+        background: $gray-lightest;
+    }
+}
+
+@media (max-width: 991px) {
+    .art-img {
+        height: 300px;
+    }
+}
+@media (max-width: 500px) {
+    .art-img {
+        height: 200px;
+    }
+}
+
+.img-source {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: white;
+    z-index: 2;
+    @extend .text-xs;
+}
+.img-corner {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-image: url(../images/angle-blue1.svg);
+    height: 50px;
+    width: 50px;
+    z-index: 3;
+}
+
+.art-content {
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    padding-bottom: 6rem;
+    margin-top: 0px;
+}
+
+$artmargin: 7rem;
+
+$artmargin-sm: 3rem;
+
+$artmargin-xs: 1.5rem;
+
+.art-margin {
+    margin-left: $artmargin;
+    margin-right: $artmargin;
+}
+.art-title {
+    @extend .art-margin;
+    padding: 4rem 0 0.5rem;;
+}
+.art-author {
+    @extend .text-sm;
+    @extend .art-margin;
+    padding-bottom: 0.5rem;
+}
+
+.art-social-body {
+    @extend .art-margin;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: none;
+    a {
+        margin: 0 1rem;
+    }
+    .social-twitter {
+        height: 24px;
+    }
+    .social-facebook {
+        height: 28px;
+    }
+    .social-google {
+        height: 25px;
+    }
+}
+
+.art-bar {
+    display: block;
+    background-color: $blue;
+    margin-left: $artmargin;
+    height: 2px;
+    margin-bottom: 3rem;
+    div {
+        float: right;
+        width: $artmargin;
+        height: 2px;
+        background-color: $yellow;
+    }
+}
+.art-text {
+    padding-bottom: 3rem;
+
+    h1, h2, h3, h4, h5 {
+        color: $gray;
+        margin: 2rem 0 1rem;
+    }
+    @extend .art-margin;
+
+    .nash-btn {
+        margin: 1rem 0 2rem;
+    }
+}
+
+.art-footer {
+    @extend .art-margin;
+}
+.hr-gray {
+    border-top: 2px solid $gray-light;
+    margin-bottom: 0.5rem;
+}
+.art-update {
+    @extend .text-sm;
+    text-align: right;
+    opacity: 0.5;
+}
+
+.art-share {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    a {
+        margin: 0 1rem;
+    }
+    img {
+        height: 25px;
+    }
+}
+.art-written-by {
+    padding-left: 20%;
+    position: relative;
+    z-index: 10;
+    margin-top: -5rem;
+    margin-bottom: 3rem;
+
+    p {
+        margin-bottom: 0;
+    }
+    h3 {
+        color: $yellow;
+    }
+    > div {
+        display: inline-block;
+        background-color: $gray;
+        color: white;
+        padding: 3rem 3rem 3rem 1rem;
+        position: relative;
+
+        a {
+            color: $yellow;
+            &:hover {
+                color: white;
+            }
+        }
+        &::after {
+            content: "";
+            background: url(../images/angle-white2.svg);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .art-margin {
+        margin-left: $artmargin-sm;
+        margin-right: $artmargin-sm;
+    }
+    .art-bar {
+        margin-left: $artmargin-sm;
+        div {
+            width: $artmargin-sm;
+        }
+    }
+    .art-title {
+        padding: 2.5rem 0 0.5rem;;
+    }
+}
+
+@media (max-width: 500px) {
+    .art-margin {
+        margin-left: $artmargin-xs;
+        margin-right: $artmargin-xs;
+    }
+    .art-bar {
+        margin-left: $artmargin-xs;
+        div {
+            width: $artmargin-xs
+        }
+    }
+}
+
+
+@media (max-width: 991px) {
+    .art-social-body {
+        display: block;
+    }
+
+    .art-written-by {
+        padding-left: 0;
+    }
+    .art-written-by > div {
+        padding: 2rem;
+    }
+
+    .art-written-by > div::after {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.art-author-photo {
+    width: 106px;
+    height: 106px;
+    float: left;
+    background-color: $blue;
+    float: right;
+    position: relative;
+}
+
+.art-author-photo::before {
+    content: "";
+    background: url(../images/placeholder03.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.art-author-photo::after {
+    content: "";
+    background: url(../images/angle-gray.svg);
+    background-position: bottom right;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+
+@media (max-width: 767px) {
+    .art-author-photo {
+        float: left;
+        margin-bottom: 1rem;
+    }
+}
+
+.art-disqus {
+    position: relative;
+    background-color: white;
+    min-height: 100px;
+    padding: 3rem $artmargin;
+    margin: 3rem auto 5rem;
+}
+.art-disqus::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/angle-light3.svg);
+    background-position: bottom right;
+    bottom: 0;
+    right: 0;
+}

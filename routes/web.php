@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/article', function () {
+    return view('article-list');
+});
+
+Route::get('/article/1234', function () {
+    return view('article');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1,0 +1,89 @@
+.bg-blog {
+    margin-bottom: 3rem;
+    background-image: url(../images/angle-blue2.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 10%;
+}
+
+.blog-post-img {
+    position: relative;
+    background: white; /* Old browsers */
+    background: -moz-linear-gradient(top, $yellow 0%, $blue 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $yellow 0%,$blue 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, $yellow 0%,$blue 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$yellow', endColorstr='$blue',GradientType=0 ); /* IE6-9 */  display: block;
+    width: 100%;
+    height: 250px;
+}
+.blog-post-img::after {
+    content: "";
+    background: url(../images/placeholder02.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.blog-post-img::before {
+    content: "";
+    background: url(../images/angle-light2.svg);
+    background-size: 50px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10;
+}
+
+@media (max-width: 991px) {
+    .blog-post-img {
+        height: 290px;
+    }
+}
+
+.blog-post-body {
+    background-color: white;
+    background-image: url(../images/angle-light.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 50px;
+    padding: 2rem 2.5rem 80px;
+
+}
+.read-more {
+    position: absolute;
+    bottom: 25px;
+    right: 4rem;
+    font-weight: 700;
+    &::after {
+        position: absolute;
+        display: block;
+        width: 0.75rem;
+        z-index: 10;
+        bottom: -0.25rem;
+        right: -23px;
+        content: url(../images/icon-arrow-right2.svg);
+    }
+
+    &:hover::after {
+        @extend .transit-02;
+        right: -27px;
+    }
+}
+
+.blog-post-cont {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    z-index: 100;
+}
