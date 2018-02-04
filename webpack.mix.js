@@ -11,5 +11,30 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.options({
+    clearConsole: false
+});
+
+mix
+    .js('resources/assets/js/app.js', 'public/js')
+    .extract([
+        'jquery',
+        'popper.js',
+        'tether',
+        'bootstrap'
+    ])
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .copyDirectory('resources/assets/images', 'public/images');
+
+if (mix.inProduction()) {
+    mix
+        .version()
+        .disableNotifications();
+} else {
+    mix
+        .browserSync({
+            open: false,
+            proxy: 'localhost:8000'
+        })
+        .sourceMaps();
+}
