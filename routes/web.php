@@ -22,5 +22,3 @@ Route::get('/article', function () {
 Route::get('/article/1234', function () {
     return view('article');
 });
-
-Route::get('/home', 'HomeController@index')->name('home');
