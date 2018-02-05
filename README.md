@@ -9,6 +9,11 @@ and its community, you are expected to uphold this code.
 
 Contributions are welcome! Please read [CONTRIBUTING][] for details.
 
+## Deployment Notes
+
+* The npm [mozjpeg][] module (required by [laravel-mix][] through [img-loader][])
+  requires libpng16-dev installed on the server: `apt-get install libpng16-dev`
+
 ## Copyright and license
 
 The content and source code of nashvillephp.org is copyright © Nashville PHP.
@@ -28,3 +33,6 @@ Please see [LICENSE][] for more information.
 [contributing]: https://github.com/nashvillephp/nashvillephp.org/blob/master/CONTRIBUTING.md
 [cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
 [license]: https://github.com/nashvillephp/nashvillephp.org/blob/master/LICENSE
+[mozjpeg]: https://www.npmjs.com/package/mozjpeg
+[laravel-mix]: https://www.npmjs.com/package/laravel-mix
+[img-loader]: https://www.npmjs.com/package/img-loader
