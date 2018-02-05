@@ -32,7 +32,7 @@
                         <a href="https://github.com/nashvillephp"><img class="icon-git" src="{{ asset('images/icon-github.svg') }}"></a>
                         <a href="https://www.meetup.com/nashvillephp/"><img class="icon-meet" src="{{ asset('images/icon-meeting.svg') }}"></a>
                         <a href="https://twitter.com/nashvillephp"><img class="icon-twit" src="{{ asset('images/icon-twitter.svg') }}"></a>
-                        <a href="ihttps://www.facebook.com/groups/353865445079359/"><img class="icon-face" src="{{ asset('images/icon-facebook.svg') }}"></a>
+                        <a href="https://www.facebook.com/groups/353865445079359/"><img class="icon-face" src="{{ asset('images/icon-facebook.svg') }}"></a>
                     </div>
                 </div>
             </div>
