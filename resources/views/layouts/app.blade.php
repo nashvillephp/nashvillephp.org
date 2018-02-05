@@ -49,9 +49,9 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/article">Articles</a></li>
-                <li><a href="">Meetup</a></li>
-                <li><a href="">Github</a></li>
-                <li><a href="">Forum</a></li>
+                <li><a href="https://www.meetup.com/nashvillephp/">Meetup</a></li>
+                <li><a href="https://github.com/nashvillephp">Github</a></li>
+                <li><a href="https://www.facebook.com/groups/353865445079359/">Forum</a></li>
             </ul>
         </div>
     </div>
@@ -68,11 +68,11 @@
                 <div class="col-md-8 footer-menu">
                     <ul>
                         <li><a href="/article">Articles</a></li>
-                        <li><a href="">Meetup</a></li>
-                        <li><a href="">Github</a></li>
-                        <li><a href="">Forum</a></li>
-                        <li><a href="">@NASHVILLEPHP</a></li>
-                        <li><a href="">#NASHVILLEPHP ON IRC</a></li>
+                        <li><a href="https://www.meetup.com/nashvillephp/">Meetup</a></li>
+                        <li><a href="https://github.com/nashvillephp">Github</a></li>
+                        <li><a href="https://www.facebook.com/groups/353865445079359/">Forum</a></li>
+                        <li><a href="https://twitter.com/nashvillephp">@NASHVILLEPHP</a></li>
+                        <li><a href="irc://chat.freenode.net:6697/nashvillephp">#NASHVILLEPHP ON IRC</a></li>
                     </ul>
                 </div>
             </div>

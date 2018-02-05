@@ -29,11 +29,10 @@
                     <h1>Welcome to Nashville PHP</h1>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore ma tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                     <div class="nash-social">
-                        <a href=""><img class="icon-git" src="{{ asset('images/icon-github.svg') }}"></a>
-                        <a href=""><img class="icon-meet" src="{{ asset('images/icon-meeting.svg') }}"></a>
-                        <a href=""><img class="icon-twit" src="{{ asset('images/icon-twitter.svg') }}"></a>
-                        <a href=""><img class="icon-face" src="{{ asset('images/icon-facebook.svg') }}"></a>
-                        <a href=""><img class="icon-goog" src="{{ asset('images/icon-google.svg') }}"></a>
+                        <a href="https://github.com/nashvillephp"><img class="icon-git" src="{{ asset('images/icon-github.svg') }}"></a>
+                        <a href="https://www.meetup.com/nashvillephp/"><img class="icon-meet" src="{{ asset('images/icon-meeting.svg') }}"></a>
+                        <a href="https://twitter.com/nashvillephp"><img class="icon-twit" src="{{ asset('images/icon-twitter.svg') }}"></a>
+                        <a href="ihttps://www.facebook.com/groups/353865445079359/"><img class="icon-face" src="{{ asset('images/icon-facebook.svg') }}"></a>
                     </div>
                 </div>
             </div>
@@ -115,7 +114,7 @@
                             <hr class="blue-bar">
                             <p>You can also find us in <strong>#php</strong> on the NashDev Slack channel.</p>
                             <p>Register NashDev Slack to join our discussions:</p>
-                            <button class="nash-btn mt-2">Register</button>
+                            <a href="http://nashdev.com/" class="nash-btn mt-2">Register</a>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -127,13 +126,13 @@
                             <pre>Server: chat.freenode.net
 Port: 6697 (SSL)
 Channel: #nashvillephp</pre>
-                            <p>For help with IRC, check out <a href="#">irchelp.org</a>.</p>
+                            <p>For help with IRC, check out <a href="http://www.irchelp.org/">irchelp.org</a>.</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div>
                             <img class="icon-top" src="{{ asset('images/icon-gray-twitter.svg') }}">
-                            <h3>Lattest Tweets</h3>
+                            <h3>Latest Tweets</h3>
                             <hr class="blue-bar"><br>
                             <a class="twitter-timeline"  href="https://twitter.com/search?q=%40nashvillephp" data-widget-id="908511029746896896">Tweets about @nashvillephp</a>
                             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
