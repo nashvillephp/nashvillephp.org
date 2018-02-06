@@ -46,7 +46,7 @@ class IndexController extends Controller
             // Do nothing; use the $nextMeetup default values.
         }
 
-        return view('welcome', [
+        return view('home', [
             'nextMeetup' => $nextMeetup,
         ]);
     }
