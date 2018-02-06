@@ -24,6 +24,7 @@ class IndexController extends Controller
         // Fetch next meetup information from Meetup.com.
         try {
             $meetup = MeetupKeyAuthClient::factory([
+                'scheme' => 'https',
                 'key' => config('meetup.api_key'),
             ]);
 
