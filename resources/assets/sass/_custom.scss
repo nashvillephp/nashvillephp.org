@@ -323,6 +323,7 @@ button:focus {outline:0;}
     padding: 0.7rem 2.3rem 0.7rem 1rem;
     position: relative;
     text-align: left;
+    display: inline-block;
 
     -webkit-box-shadow: 9px 9px 0px 0px $gray-light;
     -moz-box-shadow: 9px 9px 0px 0px $gray-light;
@@ -330,9 +331,9 @@ button:focus {outline:0;}
     transition: all 0.1s ease;
 
     &:hover {
-    -webkit-box-shadow: 6px 6px 0px 0px $gray-light;
-    -moz-box-shadow: 6px 6px 0px 0px $gray-light;
-    box-shadow: 6px 6px 0px 0px $gray-light;
+        -webkit-box-shadow: 6px 6px 0px 0px $gray-light;
+        -moz-box-shadow: 6px 6px 0px 0px $gray-light;
+        box-shadow: 6px 6px 0px 0px $gray-light;
     }
 
     &:focus, &:active {

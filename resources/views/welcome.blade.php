@@ -49,9 +49,9 @@
                 <div class="slanted">
                     <div class="text-box-sm">
                         <div class="next-event h4">Next Event</div>
-                        <h2>Title of Event</h2>
+                        <h2>{{ $nextMeetup['name'] }}</h2>
                         <hr class="blue-bar">
-                        <p>Syntax Is Not Programming - Marcus Fulbright at 8pm on Tuesday, August 8.</p>
+                        {!! $nextMeetup['description'] !!}
                     </div>
                     <div class="event-img">
                         <svg width="319px" height="299.6px">
@@ -60,7 +60,7 @@
                             </clipPath>
                         </svg>
                     </div>
-                    <button class="nash-btn mt-5">More details and RSVP</button>
+                    <a class="nash-btn mt-5" href="{{ $nextMeetup['link'] }}">More details and RSVP</a>
                 </div>
             </div>
         </div>
