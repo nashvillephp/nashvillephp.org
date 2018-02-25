@@ -35,7 +35,8 @@ in your browser automatically.
 ## Deployment notes
 
 * The npm [mozjpeg][] module (required by [laravel-mix][] through [img-loader][])
-  requires libpng16-dev installed on the server: `apt-get install libpng16-dev`
+  requires libpng16-dev (and possibly nasm) installed on the server:
+  `apt-get install libpng16-dev nasm`
 
 ## Copyright and license
 
