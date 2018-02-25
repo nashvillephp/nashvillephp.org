@@ -29,10 +29,11 @@
                     <h1>Welcome to Nashville PHP</h1>
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore ma tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                     <div class="nash-social">
-                        <a href="https://github.com/nashvillephp"><img class="icon-git" src="{{ asset('images/icon-github.svg') }}"></a>
                         <a href="https://www.meetup.com/nashvillephp/"><img class="icon-meet" src="{{ asset('images/icon-meeting.svg') }}"></a>
                         <a href="https://twitter.com/nashvillephp"><img class="icon-twit" src="{{ asset('images/icon-twitter.svg') }}"></a>
                         <a href="https://www.facebook.com/groups/353865445079359/"><img class="icon-face" src="{{ asset('images/icon-facebook.svg') }}"></a>
+                        <a href="https://www.instagram.com/nashvillephp/"><img class="icon-insta" src="{{ asset('images/icon-instagram.svg') }}"></a>
+                        <a href="https://github.com/nashvillephp"><img class="icon-git" src="{{ asset('images/icon-github.svg') }}"></a>
                     </div>
                 </div>
             </div>
