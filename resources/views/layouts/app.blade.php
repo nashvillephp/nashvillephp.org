@@ -84,6 +84,8 @@
                         <div class="nash-credits">
                             <img class="logo-nash" src="{{ asset('images/logo-nashphp-bluebg.svg') }}">
                             <p>© 2015-{{ date('y') }} Nashville PHP</p>
+                            <p>Content is licensed under a <a href="https://github.com/nashvillephp/nashvillephp.org/blob/master/LICENSE">CC BY-SA license</a>.</p>
+                            <p>Source code is licensed under the <a href="https://github.com/nashvillephp/nashvillephp.org/blob/master/LICENSE">MIT License</a>.</p>
                         </div>
                     </div>
                     <div class="col-md-4">

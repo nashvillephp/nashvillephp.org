@@ -422,6 +422,16 @@ footer {
 
 .nash-credits {
     margin: 3rem 0;
+
+    a {
+        text-decoration: underline;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+            color: $yellow;
+        }
+    }
 }
 .footer-angle {
     position: absolute;
