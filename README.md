@@ -11,6 +11,11 @@ Contributions are welcome! Please read [CONTRIBUTING][] for details.
 
 ## Developing locally
 
+First, install the project dependencies:
+
+    npm install
+    composer install
+
 To run the website locally for development, use
 
     npm run serve
