@@ -1,5 +1,9 @@
 # Nashville PHP (nashvillephp.org)
 
+[![Website](https://img.shields.io/website/https/dev.nashvillephp.org.svg?label=nashvillephp.org&style=flat-square)](https://dev.nashvillephp.org/)
+[![Travis](https://img.shields.io/travis/nashvillephp/nashvillephp.org.svg?style=flat-square)](https://travis-ci.org/nashvillephp/nashvillephp.org)
+[![Coveralls github](https://img.shields.io/coveralls/github/nashvillephp/nashvillephp.org.svg?style=flat-square)](https://coveralls.io/github/nashvillephp/nashvillephp.org)
+
 ## Code of conduct
 
 This project adheres to a [Code of Conduct][]. By participating in this project
