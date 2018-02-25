@@ -18,7 +18,7 @@ before_script:
 script:
   - ./vendor/bin/parallel-lint --exclude vendor .
   - ./vendor/bin/phpunit --verbose --coverage-clover build/logs/clover.xml
-  - ./vendor/bin/phpc --standard=psr2 -sp --colors app config routes tests
+  - ./vendor/bin/phpcs --standard=psr2 -sp --colors app config routes tests
 
 after_success:
   - travis_retry php vendor/bin/coveralls
