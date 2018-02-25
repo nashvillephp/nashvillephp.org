@@ -1,7 +1,12 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Providers;
 
+use Camel\CaseTransformer;
+use Camel\Format\CamelCase;
+use Camel\Format\SnakeCase;
+use DMS\Service\Meetup\MeetupKeyAuthClient;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Logger;
@@ -10,16 +15,6 @@ use Monolog\Handler\SyslogUdpHandler;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-    }
-
     /**
      * Register any application services.
      *
@@ -39,5 +34,16 @@ class AppServiceProvider extends ServiceProvider
             $syslogHandler->setFormatter($formatter);
             $logger->pushHandler($syslogHandler);
         }
+
+        $this->app->bind(MeetupKeyAuthClient::class, function () {
+            return MeetupKeyAuthClient::factory([
+                'scheme' => 'https',
+                'key' => config('meetup.api_key'),
+            ]);
+        });
+
+        $this->app->bind(CaseTransformer::class, function () {
+            return new CaseTransformer(new CamelCase(), new SnakeCase());
+        });
     }
 }

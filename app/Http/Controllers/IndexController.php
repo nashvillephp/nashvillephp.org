@@ -1,53 +1,49 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
+use App\NextMeetup;
+use Camel\CaseTransformer;
 use DMS\Service\Meetup\MeetupKeyAuthClient;
+use Illuminate\View\View;
 
 class IndexController extends Controller
 {
     /**
+     * @var MeetupKeyAuthClient
+     */
+    private $meetupClient;
+
+    /**
+     * @var CaseTransformer
+     */
+    private $caseTransformer;
+
+    /**
+     * @param MeetupKeyAuthClient $meetupClient
+     * @param CaseTransformer $caseTransformer
+     */
+    public function __construct(
+        MeetupKeyAuthClient $meetupClient,
+        CaseTransformer $caseTransformer
+    ) {
+        $this->meetupClient = $meetupClient;
+        $this->caseTransformer = $caseTransformer;
+    }
+
+    /**
      * The root home page
      *
-     * @return Response
+     * @return View
      */
-    public function home()
+    public function home(): View
     {
-        // Default values for the next meetup.
-        $nextMeetup = [
-            'name' => 'Our Next Meetup',
-            'description' => '<p>Our regular meetings are held on the second Tuesday of each month at 6pm.</p>',
-            'link' => 'https://www.meetup.com/nashvillephp/',
-            'photo' => '',
-        ];
-
-        // Fetch next meetup information from Meetup.com.
-        try {
-            $meetup = MeetupKeyAuthClient::factory([
-                'scheme' => 'https',
-                'key' => config('meetup.api_key'),
-            ]);
-
-            $meetupEvents = $meetup->getGroupEvents([
-                'urlname' => 'nashvillephp',
-                'scroll' => 'next_upcoming',
-                'status' => 'upcoming',
-                'only' => 'name,status,time,utc_offset,yes_rsvp_count,link,description,visibility,featured_photo',
-            ]);
-
-            foreach ($meetupEvents->getData() as $event) {
-                if (stripos($event['name'], 'lunch') === false) {
-                    // Get the next event that's not a lunch.
-                    $nextMeetup = array_merge($nextMeetup, $event);
-                    break;
-                }
-            }
-        } catch (\Exception $e) {
-            // Do nothing; use the $nextMeetup default values.
-        }
-
         return view('home', [
-            'nextMeetup' => $nextMeetup,
+            'nextMeetup' => new NextMeetup(
+                $this->meetupClient,
+                $this->caseTransformer
+            ),
         ]);
     }
 }

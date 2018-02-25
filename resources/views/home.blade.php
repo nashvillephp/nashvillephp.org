@@ -49,18 +49,25 @@
                 <div class="slanted">
                     <div class="text-box-sm">
                         <div class="next-event h4">Next Event</div>
-                        <h2>{{ $nextMeetup['name'] }}</h2>
+                        <h2>{{ $nextMeetup->getName() }}</h2>
                         <hr class="blue-bar">
-                        {!! $nextMeetup['description'] !!}
+                        <p>
+                            {{ date('l, F j, Y', $nextMeetup->getStartTime()) }}
+                            <br>
+                            {{ date('g:i a', $nextMeetup->getStartTime()) }}
+                            to
+                            {{ date('g:i a', $nextMeetup->getEndTime()) }}
+                        </p>
+                        {!! $nextMeetup->getDescription() !!}
                     </div>
-                    <div class="event-img">
+                    <div class="event-img" style="{!! $nextMeetup->getPhotoUrl() ? 'background-image: url(' . $nextMeetup->getPhotoUrl() . ');' : '' !!}">
                         <svg width="319px" height="299.6px">
                             <clipPath id="myClip">
                                 <path d="M0,0 0,241 58.6,299.6 319,299.6 319,51.1 267.9,0 "/>
                             </clipPath>
                         </svg>
                     </div>
-                    <a class="nash-btn mt-5" href="{{ $nextMeetup['link'] }}">More details and RSVP</a>
+                    <a class="nash-btn mt-5" href="{{ $nextMeetup->getLink() }}">More details and RSVP</a>
                 </div>
             </div>
         </div>
@@ -74,7 +81,7 @@
         <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-0 col-xl-6 offset-xl-1">
             <div class="slanted nash-videos">
                 <div class="text-box-xs">
-                    <h2>Check our last talks</h2>
+                    <h2>View our latest talks</h2>
                     <hr class="blue-bar">
                     <p>Text explaining that the talks are recorded and streamed live, inviting the developers to susbcribe to the group’s youtube channel.</p>
                 </div>
@@ -89,7 +96,7 @@
         <div class="col-lg-8 offset-lg-2 col-xl-4 offset-xl-0">
             <div class="slanted-sm speaker">
                 <div class="">
-                    <h2>Become a speaker</h2>
+                    <h2>Be a speaker</h2>
                     <hr class="blue-bar">
                     <p>Text explaining that the group is open to new speakers and inviting developers to submit a talk idea.</p>
                     <button class="nash-btn mt-2">Submit a Talk</button>
