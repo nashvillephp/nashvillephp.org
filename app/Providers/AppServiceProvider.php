@@ -7,6 +7,7 @@ use Camel\CaseTransformer;
 use Camel\Format\CamelCase;
 use Camel\Format\SnakeCase;
 use DMS\Service\Meetup\MeetupKeyAuthClient;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Logger;
@@ -15,6 +16,18 @@ use Monolog\Handler\SyslogUdpHandler;
 
 class AppServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        Blade::if('environment', function ($environment) {
+           return app()->environment($environment);
+        });
+    }
+
     /**
      * Register any application services.
      *
