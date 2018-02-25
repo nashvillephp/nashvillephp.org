@@ -25,6 +25,8 @@ class LoadHomePageTest extends TestCase
 
         $response = $this->get('/');
 
+        var_export($response->dump());
+
         $response->assertStatus(200);
         $response->assertSeeText('February PHP Meeting');
     }
