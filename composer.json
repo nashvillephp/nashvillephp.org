@@ -4,7 +4,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "dms/meetup-api-client": "^2.3",
         "fideloper/proxy": "^3.3",
         "graham-campbell/markdown": "^9.0",
