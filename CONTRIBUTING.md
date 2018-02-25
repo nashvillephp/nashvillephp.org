@@ -44,12 +44,51 @@ When you do begin working on your feature, here are some guidelines to consider:
 * **Submit one feature per pull request.** If you have multiple features you wish to submit, please break them up into separate pull requests.
 * **Send coherent history**. Make sure each individual commit in your pull request is meaningful. If you had to make multiple intermediate commits while developing, please squash them before submitting.
 
+## Developing Locally
+
+First, fork this repository and create a new branch for your feature or bugfix.
+If you're new to Git or GitHub, you can read about forks and pull requests in
+the GitHub [Forking Projects][] and [Understanding the GitHub Flow][] guides.
+
+After cloning your fork and creating a new branch to work in, install the
+project dependencies:
+
+    npm install
+    composer install
+
+To run the website locally for development, use
+
+    npm run serve
+
+Leave it running in your terminal and browse to the website at
+<http://localhost:8000>.
+
+While it's running, [Laravel Mix][] watches all your files, and regenerates
+assets in the `public/` directory every time a change is made. Meanwhile,
+[Browsersync][] refreshes the pages in your browser automatically.
+
+That's it! Now, you're ready to develop locally. When you're ready, push your
+branch to your fork, and [open a pull request][].
+
+Thanks for helping us out!
+
+### System Dependencies
+
+Depending on your system, the npm [mozjpeg][] module (required by [laravel-mix][]
+through [img-loader][]) requires libpng16-dev (and possibly nasm) installed. If
+using Ubuntu or Debian, you may install these with `apt-get`:
+
+    apt-get install libpng16-dev nasm
+
 ## Running Tests
 
 The following must pass before we will accept a pull request. If this does not pass, it will result in a complete build failure. Before you can run this, be sure to `composer install`.
 
 To run all the tests and coding standards checks, execute the following from the command line, while in the project root directory (the came place as the `composer.json` file):
 
-```
-composer test
-```
+    composer test
+
+
+[forking projects]: https://guides.github.com/activities/forking/
+[understanding the github flow]: https://guides.github.com/introduction/flow/
+[open a pull request]: https://help.github.com/articles/creating-a-pull-request-from-a-fork/

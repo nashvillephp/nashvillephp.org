@@ -9,34 +9,10 @@
 This project adheres to a [Code of Conduct][]. By participating in this project
 and its community, you are expected to uphold this code.
 
-## Contributing
+## Developing and Contributing
 
-Contributions are welcome! Please read [CONTRIBUTING][] for details.
-
-## Developing locally
-
-First, install the project dependencies:
-
-    npm install
-    composer install
-
-To run the website locally for development, use
-
-    npm run serve
-
-Leave it running in your terminal and browse to the website at
-<http://localhost:8000>.
-
-While it's running, [Laravel Mix][] watches assets, according to the settings
-in `webpack.mix.js`, and regenerates those assets in the `public/` directory
-every time a change is made. Meanwhile, [Browsersync][] refreshes the pages
-in your browser automatically.
-
-## Deployment notes
-
-* The npm [mozjpeg][] module (required by [laravel-mix][] through [img-loader][])
-  requires libpng16-dev (and possibly nasm) installed on the server:
-  `apt-get install libpng16-dev nasm`
+Contributions are welcome! Please read [CONTRIBUTING][] for details on how to
+contribute and set up your environment locally for development.
 
 ## Copyright and license
 
