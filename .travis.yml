@@ -8,7 +8,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - libpng16-dev
+      - libpng12-dev
 
 before_install:
   - travis_retry composer self-update
