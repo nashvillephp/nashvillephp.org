@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Blade::if('environment', function ($environment) {
-           return app()->environment($environment);
+            return app()->environment($environment);
         });
     }
 
