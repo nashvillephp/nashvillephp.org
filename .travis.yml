@@ -8,8 +8,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - libpng12-dev
-      - libjpeg8-dev
+      - nasm
 
 before_install:
   - travis_retry composer self-update
