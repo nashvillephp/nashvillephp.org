@@ -102,3 +102,8 @@ To run all the tests and coding standards checks, execute the following from the
 [php 7.2]: http://php.net/
 [phpbrew]: http://phpbrew.github.io/phpbrew/
 [xampp]: https://www.apachefriends.org/index.html
+[mozjpeg]: https://www.npmjs.com/package/mozjpeg
+[laravel-mix]: https://www.npmjs.com/package/laravel-mix
+[img-loader]: https://www.npmjs.com/package/img-loader
+[laravel mix]: https://www.npmjs.com/package/laravel-mix
+[browsersync]: https://www.npmjs.com/package/browser-sync
