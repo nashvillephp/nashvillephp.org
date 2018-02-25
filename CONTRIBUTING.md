@@ -51,7 +51,8 @@ If you're new to Git or GitHub, you can read about forks and pull requests in
 the GitHub [Forking Projects][] and [Understanding the GitHub Flow][] guides.
 
 After cloning your fork and creating a new branch to work in, install the
-project dependencies:
+project dependencies (you'll need to have [Node.js][] and [Composer][]
+installed):
 
     npm install
     composer install
@@ -92,3 +93,5 @@ To run all the tests and coding standards checks, execute the following from the
 [forking projects]: https://guides.github.com/activities/forking/
 [understanding the github flow]: https://guides.github.com/introduction/flow/
 [open a pull request]: https://help.github.com/articles/creating-a-pull-request-from-a-fork/
+[node.js]: https://nodejs.org/
+[composer]: https://getcomposer.org/
