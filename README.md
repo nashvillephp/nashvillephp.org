@@ -9,7 +9,21 @@ and its community, you are expected to uphold this code.
 
 Contributions are welcome! Please read [CONTRIBUTING][] for details.
 
-## Deployment Notes
+## Developing locally
+
+To run the website locally for development, use
+
+    npm run serve
+
+Leave it running in your terminal and browse to the website at
+<http://localhost:8000>.
+
+While it's running, [Laravel Mix][] watches assets, according to the settings
+in `webpack.mix.js`, and regenerates those assets in the `public/` directory
+every time a change is made. Meanwhile, [Browsersync][] refreshes the pages
+in your browser automatically.
+
+## Deployment notes
 
 * The npm [mozjpeg][] module (required by [laravel-mix][] through [img-loader][])
   requires libpng16-dev installed on the server: `apt-get install libpng16-dev`
@@ -36,3 +50,5 @@ Please see [LICENSE][] for more information.
 [mozjpeg]: https://www.npmjs.com/package/mozjpeg
 [laravel-mix]: https://www.npmjs.com/package/laravel-mix
 [img-loader]: https://www.npmjs.com/package/img-loader
+[laravel mix]: https://www.npmjs.com/package/laravel-mix
+[browsersync]: https://www.npmjs.com/package/browser-sync
