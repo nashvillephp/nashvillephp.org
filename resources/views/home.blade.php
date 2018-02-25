@@ -59,7 +59,7 @@
                             to
                             {{ date('g:i a', $nextMeetup->getEndTime()) }}
                         </p>
-                        {!! $nextMeetup->getDescription() !!}
+                        {!! $markdown->convertToHtml($nextMeetup->getPlainTextNoImagesDescription()) !!}
                     </div>
                     <div class="event-img" style="{!! $nextMeetup->getPhotoUrl() ? 'background-image: url(' . $nextMeetup->getPhotoUrl() . ');' : '' !!}">
                         <svg width="319px" height="299.6px">

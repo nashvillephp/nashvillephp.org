@@ -7,6 +7,7 @@ use App\NextMeetup;
 use Camel\CaseTransformer;
 use DMS\Service\Meetup\MeetupKeyAuthClient;
 use Illuminate\View\View;
+use League\CommonMark\Converter as MarkdownConverter;
 
 class IndexController extends Controller
 {
@@ -23,13 +24,16 @@ class IndexController extends Controller
     /**
      * @param MeetupKeyAuthClient $meetupClient
      * @param CaseTransformer $caseTransformer
+     * @param MarkdownConverter $markdownConverter
      */
     public function __construct(
         MeetupKeyAuthClient $meetupClient,
-        CaseTransformer $caseTransformer
+        CaseTransformer $caseTransformer,
+        MarkdownConverter $markdownConverter
     ) {
         $this->meetupClient = $meetupClient;
         $this->caseTransformer = $caseTransformer;
+        $this->markdownConverter = $markdownConverter;
     }
 
     /**
@@ -40,6 +44,7 @@ class IndexController extends Controller
     public function home(): View
     {
         return view('home', [
+            'markdown' => $this->markdownConverter,
             'nextMeetup' => new NextMeetup(
                 $this->meetupClient,
                 $this->caseTransformer
