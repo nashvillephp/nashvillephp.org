@@ -75,6 +75,10 @@ Thanks for helping us out!
 
 ### System Dependencies
 
+This project requires [PHP 7.2][]. On macOS or Linux, we recommend using
+[PHPBrew][] to install and manage PHP versions. On Windows, [XAMPP][] is a
+good choice.
+
 Depending on your system, the npm [mozjpeg][] module (required by [laravel-mix][]
 through [img-loader][]) requires libpng16-dev (and possibly nasm) installed. If
 using Ubuntu or Debian, you may install these with `apt-get`:
@@ -95,3 +99,6 @@ To run all the tests and coding standards checks, execute the following from the
 [open a pull request]: https://help.github.com/articles/creating-a-pull-request-from-a-fork/
 [node.js]: https://nodejs.org/
 [composer]: https://getcomposer.org/
+[php 7.2]: http://php.net/
+[phpbrew]: http://phpbrew.github.io/phpbrew/
+[xampp]: https://www.apachefriends.org/index.html
