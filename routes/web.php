@@ -13,10 +13,10 @@
 
 Route::get('/', 'IndexController@home');
 
-Route::get('/article', function () {
+Route::get('/articles', function () {
     return view('article-list');
 });
 
-Route::get('/article/1234', function () {
+Route::get('/articles/1234', function () {
     return view('article');
 });

@@ -29,7 +29,7 @@
                                 <h3>Learn To Test Like A Grumpy Programmer</h3>
                                 <hr class="blue-bar">
                                 <p>Chris Hartjes—a.k.a. @grmpyprogrammer—is bringing his brand of Grumpy Learning to Nashville for a one-day testing workshop!</p>
-                                <a class="read-more" href="/article/1234">Read More</a>
+                                <a class="read-more" href="/articles/1234">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                                 <h3>Learn To Test Like A Grumpy Programmer</h3>
                                 <hr class="blue-bar">
                                 <p>Chris Hartjes—a.k.a. @grmpyprogrammer—is bringing his brand of Grumpy Learning to Nashville for a one-day testing workshop!</p>
-                                <a class="read-more" href="/article/1234">Read More</a>
+                                <a class="read-more" href="/articles/1234">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                 <h3>Learn To Test Like A Grumpy Programmer</h3>
                                 <hr class="blue-bar">
                                 <p>Chris Hartjes—a.k.a. @grmpyprogrammer—is bringing his brand of Grumpy Learning to Nashville for a one-day testing workshop!</p>
-                                <a class="read-more" href="/article/1234">Read More</a>
+                                <a class="read-more" href="/articles/1234">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@
                                 <h3>Learn To Test Like A Grumpy Programmer</h3>
                                 <hr class="blue-bar">
                                 <p>Chris Hartjes—a.k.a. @grmpyprogrammer—is bringing his brand of Grumpy Learning to Nashville for a one-day testing workshop!</p>
-                                <a class="read-more" href="/article/1234">Read More</a>
+                                <a class="read-more" href="/articles/1234">Read More</a>
                             </div>
                         </div>
                     </div>

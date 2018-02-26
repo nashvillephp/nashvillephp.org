@@ -58,7 +58,7 @@
         <div class="nav-menu">
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/article">Articles</a></li>
+                <li><a href="/articles">Articles</a></li>
                 <li><a href="https://www.meetup.com/nashvillephp/">Meetup</a></li>
                 <li><a href="https://github.com/nashvillephp">Github</a></li>
                 <li><a href="https://www.facebook.com/groups/nashpug/">Forum</a></li>
@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-md-8 footer-menu">
                     <ul>
-                        <li><a href="/article">Articles</a></li>
+                        <li><a href="/articles">Articles</a></li>
                         <li><a href="https://www.meetup.com/nashvillephp/">Meetup</a></li>
                         <li><a href="https://github.com/nashvillephp">Github</a></li>
                         <li><a href="https://www.facebook.com/groups/nashpug/">Forum</a></li>
