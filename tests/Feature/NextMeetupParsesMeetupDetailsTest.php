@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
-use App\ArrayValueObject;
 use App\NextMeetup;
 use Camel\CaseTransformer;
 use Camel\Format\CamelCase;

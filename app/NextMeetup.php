@@ -214,6 +214,21 @@ class NextMeetup
     }
 
     /**
+     * Returns true if the meeting name indicates it is a valid meeting for this class
+     *
+     * The meeting name will include keywords that are used to determine if it
+     * is the correct type of meeting that matches the goal of this class.
+     *
+     * @param string $name The meeting name
+     * @return bool
+     */
+    protected function isValidMeeting(string $name): bool
+    {
+        // Return true if the meeting is not a lunch.
+        return stripos($name, 'lunch') === false;
+    }
+
+    /**
      * Returns an array of the next Meetup details, requested from Meetup.com
      *
      * @param AbstractMeetupClient $client The client to use for Meetup.com requests
@@ -222,11 +237,10 @@ class NextMeetup
     private function loadNextMeetup(AbstractMeetupClient $client): array
     {
         $details = [];
-        $events = $client->getGroupEvents(static::GROUP_EVENTS_PARAMS);
+        $events = $client->getGroupEvents(self::GROUP_EVENTS_PARAMS);
 
         foreach ($events->getData() as $event) {
-            if (stripos($event['name'], 'lunch') === false) {
-                // Get the next event that's not a lunch.
+            if ($this->isValidMeeting($event['name'])) {
                 $details = $event;
                 break;
             }
