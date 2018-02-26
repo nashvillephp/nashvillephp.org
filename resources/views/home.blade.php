@@ -43,7 +43,7 @@
 <!-- END OF HERO-->
 
 <!-- START OF NEXT EVENT -->
-<div class="angled-bg">
+<div class="angled-bg event-meeting">
     <div class="container">
         <div class="row">
             <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-0 col-xl-8 offset-xl-1">
@@ -75,6 +75,42 @@
     </div>
 </div>
 <!-- END OF NEXT EVENT -->
+
+@if ($nextLunch !== null)
+<!-- START OF NEXT LUNCH -->
+<div class="angled-bg event-lunch">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-2 col-xl-8 offset-xl-3">
+                <div class="slanted">
+                    <div class="text-box-sm">
+                        <div class="next-event h4">Next Lunch</div>
+                        <h2>{{ $nextLunch->getName() }}</h2>
+                        <hr class="blue-bar">
+                        <p>
+                            {{ date('l, F j, Y', $nextLunch->getStartTime()) }}
+                            <br>
+                            {{ date('g:i a', $nextLunch->getStartTime()) }}
+                            to
+                            {{ date('g:i a', $nextLunch->getEndTime()) }}
+                        </p>
+                        {!! $markdown->convertToHtml($nextLunch->getPlainTextNoImagesDescription()) !!}
+                    </div>
+                    <div class="event-img" style="{!! $nextLunch->getPhotoUrl() ? 'background-image: url(' . $nextLunch->getPhotoUrl() . ');' : '' !!}">
+                        <svg width="319px" height="299.6px">
+                            <clipPath id="myClip">
+                                <path d="M0,0 0,241 58.6,299.6 319,299.6 319,51.1 267.9,0 "/>
+                            </clipPath>
+                        </svg>
+                    </div>
+                    <a class="nash-btn mt-5" href="{{ $nextLunch->getLink() }}">More details and RSVP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF NEXT LUNCH -->
+@endif
 
 <!-- START OF VIDEOS -->
 <div class="container">

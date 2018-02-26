@@ -292,26 +292,6 @@
     z-index: 1;
 }
 
-
-@media (max-width: 500px) {
-    .slanted, .slanted-sm {
-        padding: 30px 20px 50px;
-    }
-}
-
-// @media (max-width: 767px) {
-//  .slanted, .slanted-sm {
-//      padding: 30px 20px 50px;
-//  }
-// }
-
-@media (max-width: 1200px) {
-    .slanted-sm {
-        background: none;
-        padding: 0;
-    }
-}
-
 .next-event {
     background-color: $yellow;
     color: $blue;
@@ -344,12 +324,6 @@
 
 }
 
-@media (max-width: 710px) {
-    .angled-bg {
-        background-size: cover;
-    }
-}
-
 .event-img {
     position: absolute;
     background: url(../images/placeholder01.jpg);
@@ -367,12 +341,56 @@
     -webkit-transform:translate3d(0, 0, 0);
 }
 
+.event-meeting {
+}
+
+.event-lunch {
+    .next-event {
+        background-image: url(../images/angle-white.svg), url(../images/angle-light2.svg);
+    }
+
+    @at-root .angled-bg.event-lunch {
+        background: none;
+
+        .slanted {
+            background-image: url(../images/angle-light.svg), url(../images/angle-light2.svg);
+        }
+    }
+
+    .text-box-sm, .nash-btn {
+        margin-left: 125px;
+    }
+
+    .event-img {
+        right: auto;
+        left: -200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .slanted, .slanted-sm {
+        padding: 30px 20px 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .slanted-sm {
+        background: none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 710px) {
+    .angled-bg {
+        background-size: cover;
+    }
+}
+
 @media (min-width: 450px) {
     .event-img {
         clip-path: url(#myClip);
     }
 }
-
 
 @media (max-width: 1200px) {
     .event-img {
@@ -381,7 +399,6 @@
 }
 
 @media (max-width: 970px) {
-
     .event-img {
         margin-top: 2rem;
         position: relative;
