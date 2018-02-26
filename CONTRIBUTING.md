@@ -57,7 +57,22 @@ installed):
     npm install
     composer install
 
-To run the website locally for development, use
+Before you're able to run the website, you'll need to set up some environment
+variables. Copy `.env.example` to `.env`, generate an app key, and add your
+Meetup.com API Key:
+
+    cp .env.example .env
+    php artisan key:generate
+
+Go to <https://secure.meetup.com/meetup_api/key/> and copy your Meetup.com API
+key. Then, edit `.env` and paste the API key as the value for `MEETUP_API_KEY`:
+
+    MEETUP_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Now, you're ready to run the website locally for development. Typically, with a
+Laravel app, you might be familiar with running `php artisan serve` to run your
+app with PHP's built-in web server. Instead, we'll run the following command,
+which does the same thing but also watches CSS and JS files for changes:
 
     npm run serve
 
