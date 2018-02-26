@@ -120,9 +120,10 @@
                             <img class="icon-top" src="{{ asset('images/icon-gray-slack.svg') }}">
                             <h3>Slack Channel</h3>
                             <hr class="blue-bar">
-                            <p>You can also find us in <strong>#php</strong> on the NashDev Slack channel.</p>
-                            <p>Register NashDev Slack to join our discussions:</p>
-                            <a href="http://nashdev.com/" class="nash-btn mt-2">Register</a>
+                            <p>You can find us in the <strong>#php</strong> channel on the NashDev Slack team.</p>
+                            <p>Register for free with NashDev Slack to join our discussions:</p>
+                            <p><a href="http://nashdev.com/" class="nash-btn mt-2">Register</a></p>
+                            <p><small><em>Registrations might be down. If that's the case, <a href="mailto:organizers@nashvillephp.org?subject=NashDev%20Slack%20Invitation%20Request">send us an email</a>, and we'll hook you up with an invitation.</em></small></p>
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -130,7 +131,7 @@
                             <img class="icon-top" src="{{ asset('images/icon-gray-chat.svg') }}">
                             <h3>Realtime Conversation</h3>
                             <hr class="blue-bar">
-                            <p>Join us in #nashvillephp on Freenode IRC throughout the day  for realtime conversation, and if you need PHP help, feel free to ask.</p>
+                            <p>Join us in <strong>#nashvillephp</strong> on Freenode IRC throughout the day for realtime conversation, and if you need PHP help, feel free to ask.</p>
                             <pre>Server: chat.freenode.net
 Port: 6697 (SSL)
 Channel: #nashvillephp</pre>

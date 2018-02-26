@@ -92,7 +92,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="nash-credits">
-                            <img class="logo-nash" src="{{ asset('images/logo-nashphp-bluebg.svg') }}">
+                            <a href="/"><img class="logo-nash" src="{{ asset('images/logo-nashphp-bluebg.svg') }}"></a>
                             <p>© 2015-{{ date('y') }} Nashville PHP<br>&nbsp;</p>
                             <p>Please read our <a href="https://github.com/nashvillephp/policies">code of conduct</a>.</p>
                             <p>Content licensed under <a href="https://github.com/nashvillephp/nashvillephp.org/blob/master/LICENSE">CC BY-SA</a>.</p>
