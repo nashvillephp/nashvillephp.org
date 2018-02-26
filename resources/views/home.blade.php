@@ -27,7 +27,7 @@
 
                 <div class="text-box">
                     <h1>Welcome to Nashville PHP</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore ma tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                    <p>Nashville PHP is a community of PHP and Web developers serving the metro Nashville and Middle Tennessee areas. Everyone is welcome, no matter your skill level. Come learn with us!</p>
                     <div class="nash-social">
                         <a href="https://www.meetup.com/nashvillephp/"><img class="icon-meet" src="{{ asset('images/icon-meeting.svg') }}"></a>
                         <a href="https://twitter.com/nashvillephp"><img class="icon-twit" src="{{ asset('images/icon-twitter.svg') }}"></a>
