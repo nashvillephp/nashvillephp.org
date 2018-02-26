@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    @environment('production')
+    @if (getenv('APP_ENV') === 'production')
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114740882-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -9,7 +9,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-114740882-1');
     </script>
-    @endenvironment
+    @endif
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
