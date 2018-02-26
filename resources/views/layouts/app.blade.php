@@ -61,7 +61,7 @@
                 <li><a href="/article">Articles</a></li>
                 <li><a href="https://www.meetup.com/nashvillephp/">Meetup</a></li>
                 <li><a href="https://github.com/nashvillephp">Github</a></li>
-                <li><a href="https://www.facebook.com/groups/353865445079359/">Forum</a></li>
+                <li><a href="https://www.facebook.com/groups/nashpug/">Forum</a></li>
             </ul>
         </div>
     </div>
@@ -80,7 +80,7 @@
                         <li><a href="/article">Articles</a></li>
                         <li><a href="https://www.meetup.com/nashvillephp/">Meetup</a></li>
                         <li><a href="https://github.com/nashvillephp">Github</a></li>
-                        <li><a href="https://www.facebook.com/groups/353865445079359/">Forum</a></li>
+                        <li><a href="https://www.facebook.com/groups/nashpug/">Forum</a></li>
                         <li><a href="https://twitter.com/nashvillephp">@NASHVILLEPHP</a></li>
                         <li><a href="irc://chat.freenode.net:6697/nashvillephp">#NASHVILLEPHP ON IRC</a></li>
                     </ul>
