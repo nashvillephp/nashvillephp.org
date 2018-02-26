@@ -116,6 +116,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-0 col-xl-6 offset-xl-1">
+            <!--
             <div class="slanted nash-videos">
                 <div class="text-box-xs">
                     <h2>View our latest talks</h2>
@@ -129,14 +130,15 @@
                 </div>
                 <button class="nash-btn mt-5">Subscribe to our YouTube Channel</button>
             </div>
+            -->
         </div>
         <div class="col-lg-8 offset-lg-2 col-xl-4 offset-xl-0">
             <div class="slanted-sm speaker">
-                <div class="">
+                <div>
                     <h2>Be a speaker</h2>
                     <hr class="blue-bar">
-                    <p>Text explaining that the group is open to new speakers and inviting developers to submit a talk idea.</p>
-                    <button class="nash-btn mt-2">Submit a Talk</button>
+                    <p>New to speaking or have many talks under your belt? We welcome speakers from all experience levels. Submit a talk today!</p>
+                    <a class="nash-btn mt-2" href="/speak">Submit a Talk</a>
                 </div>
             </div>
         </div>
