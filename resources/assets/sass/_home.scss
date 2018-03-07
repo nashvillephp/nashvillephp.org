@@ -318,6 +318,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$blue', endColorstr='$gray-lightest',GradientType=0 ); /* IE6-9 */
     background-position: left top, right bottom;
     background-repeat: no-repeat, no-repeat;
+    background-size: cover;
     .slanted {
         background-image: url(../images/angle-light.svg), url(../images/angle-blue1.svg);
     }
@@ -349,6 +350,11 @@
         background-image: url(../images/angle-white.svg), url(../images/angle-light2.svg);
     }
 
+    .event-img {
+        right: auto;
+        left: -28%;
+    }
+
     @at-root .angled-bg.event-lunch {
         background: none;
 
@@ -356,14 +362,13 @@
             background-image: url(../images/angle-light.svg), url(../images/angle-light2.svg);
         }
     }
+}
 
-    .text-box-sm, .nash-btn {
-        margin-left: 125px;
-    }
-
-    .event-img {
-        right: auto;
-        left: -200px;
+@media (min-width: 971px) {
+    .event-lunch {
+        .text-box-sm, .nash-btn {
+            margin-left: 175px;
+        }
     }
 }
 
@@ -380,12 +385,6 @@
     }
 }
 
-@media (max-width: 710px) {
-    .angled-bg {
-        background-size: cover;
-    }
-}
-
 @media (min-width: 450px) {
     .event-img {
         clip-path: url(#myClip);
@@ -396,6 +395,12 @@
     .event-img {
         right: -18%;
     }
+
+    .event-lunch {
+        .event-img {
+            left: -18%;
+        }
+    }
 }
 
 @media (max-width: 970px) {
@@ -404,6 +409,12 @@
         position: relative;
         top: auto;
         right: auto;
+    }
+
+    .event-lunch {
+        .event-img {
+            left: auto;
+        }
     }
 }
 
