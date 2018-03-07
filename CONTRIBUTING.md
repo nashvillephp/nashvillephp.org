@@ -69,6 +69,20 @@ key. Then, edit `.env` and paste the API key as the value for `MEETUP_API_KEY`:
 
     MEETUP_API_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+Go to <https://developers.google.com/api-client-library/php/start/get_started>
+and [create a service account][]. Enable access to the [Google Sheets API][]
+for your service account. Copy the JSON file containing your service account
+keys to a secure location, and edit `.env` with the full path to the JSON file
+as the value for `GOOGLE_APPLICATION_CREDENTIALS`:
+
+    GOOGLE_APPLICATION_CREDENTIALS=/path/to/service-account.json
+
+Create a Google Sheet to which the above credentials have access and copy the
+ID of the sheet to `GOOGLE_PROPOSALS_SHEET_ID` in `.env`. Then, grant read and
+write access on your sheet to the service account. The service account has an
+ID that looks like an email address; use this to "share" the sheet with the
+service account.
+
 Now, you're ready to run the website locally for development. Typically, with a
 Laravel app, you might be familiar with running `php artisan serve` to run your
 app with PHP's built-in web server. Instead, we'll run the following command,
@@ -122,3 +136,5 @@ To run all the tests and coding standards checks, execute the following from the
 [img-loader]: https://www.npmjs.com/package/img-loader
 [laravel mix]: https://www.npmjs.com/package/laravel-mix
 [browsersync]: https://www.npmjs.com/package/browser-sync
+[create a service account]: https://developers.google.com/api-client-library/php/auth/service-accounts#creatinganaccount
+[google sheets api]: https://console.developers.google.com/apis/library/sheets.googleapis.com/

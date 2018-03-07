@@ -285,6 +285,11 @@ small {
     letter-spacing: 0.03rem;
 }
 
+.hr-gray {
+    border-top: 2px solid $gray-light;
+    margin-bottom: 0.5rem;
+}
+
 // BACKGROUNDS
 .bg-blue {
     background-color: $blue;

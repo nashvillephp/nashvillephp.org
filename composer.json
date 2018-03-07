@@ -7,6 +7,7 @@
         "php": "^7.2",
         "dms/meetup-api-client": "^2.3",
         "fideloper/proxy": "^3.3",
+        "google/apiclient": "^2.2",
         "graham-campbell/markdown": "^9.0",
         "laravel/framework": "5.5.*",
         "mattketmo/camel": "^1.1"

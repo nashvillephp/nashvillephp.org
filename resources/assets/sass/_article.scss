@@ -212,10 +212,6 @@ $artmargin-xs: 1.5rem;
 .art-footer {
     @extend .art-margin;
 }
-.hr-gray {
-    border-top: 2px solid $gray-light;
-    margin-bottom: 0.5rem;
-}
 .art-update {
     @extend .text-sm;
     text-align: right;

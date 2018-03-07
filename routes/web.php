@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'IndexController@home');
+Route::get('/', 'IndexController@home')->name('home');
+Route::get('/speak', 'ProposalController@proposalForm')->name('speak');
+Route::post('/speak', 'ProposalController@processProposal');
 
 Route::get('/articles', function () {
     return view('article-list');

@@ -7,6 +7,8 @@ use Camel\CaseTransformer;
 use Camel\Format\CamelCase;
 use Camel\Format\SnakeCase;
 use DMS\Service\Meetup\MeetupKeyAuthClient;
+use Google_Client;
+use Google_Service_Sheets;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\ServiceProvider;
@@ -45,6 +47,14 @@ class AppServiceProvider extends ServiceProvider
 
         $this->app->bind(CaseTransformer::class, function () {
             return new CaseTransformer(new CamelCase(), new SnakeCase());
+        });
+
+        $this->app->bind(Google_Service_Sheets::class, function () {
+            $client = new Google_Client();
+            $client->setAuthConfigFile(config('google.auth_config_file'));
+            $client->addScope(Google_Service_Sheets::SPREADSHEETS);
+
+            return new Google_Service_Sheets($client);
         });
     }
 }

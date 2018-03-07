@@ -1,0 +1,117 @@
+.page-content-cont {
+    background-image: url(../images/angle-blue1.svg);
+    background-repeat: no-repeat;
+    background-position: -80% -1%;
+    background-size: 70%;
+}
+
+@media (max-width: 1100px) {
+    .page-content-cont {
+        background-position: -100% -1%;
+    }
+}
+
+@media (min-width: 1300px) {
+    .page-content-cont {
+        background-position: -60% -1%;
+    }
+}
+
+@media (max-width: 991px) {
+    .page-content-cont {
+        margin-top: -1px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .page-content-cont {
+        background: $gray-lightest;
+    }
+}
+
+.page-content {
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    padding-bottom: 6rem;
+    margin-top: 0px;
+    margin-bottom: 3rem;
+}
+
+$pagemargin: 7rem;
+$pagemargin-sm: 3rem;
+$pagemargin-xs: 1.5rem;
+
+.page-margin {
+    margin-left: $pagemargin;
+    margin-right: $pagemargin;
+}
+
+.page-title {
+    @extend .page-margin;
+    padding: 4rem 0 0.5rem;;
+}
+
+.page-bar {
+    display: block;
+    background-color: $blue;
+    margin-left: $pagemargin;
+    height: 2px;
+    margin-bottom: 3rem;
+    div {
+        float: right;
+        width: $pagemargin;
+        height: 2px;
+        background-color: $yellow;
+    }
+}
+
+.page-text {
+    padding-bottom: 3rem;
+
+    h1, h2, h3, h4, h5 {
+        color: $gray;
+        margin: 2rem 0 1rem;
+    }
+    @extend .page-margin;
+
+    .nash-btn {
+        margin: 1rem 0 2rem;
+    }
+}
+
+.page-footer {
+    @extend .page-margin;
+}
+
+@media (max-width: 767px) {
+    .page-margin {
+        margin-left: $pagemargin-sm;
+        margin-right: $pagemargin-sm;
+    }
+
+    .page-bar {
+        margin-left: $pagemargin-sm;
+        div {
+            width: $pagemargin-sm;
+        }
+    }
+
+    .page-title {
+        padding: 2.5rem 0 0.5rem;;
+    }
+}
+
+@media (max-width: 500px) {
+    .page-margin {
+        margin-left: $pagemargin-xs;
+        margin-right: $pagemargin-xs;
+    }
+
+    .page-bar {
+        margin-left: $pagemargin-xs;
+        div {
+            width: $pagemargin-xs
+        }
+    }
+}
