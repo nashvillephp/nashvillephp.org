@@ -13,6 +13,8 @@ use DMS\Service\Meetup\AbstractMeetupClient;
  */
 class NextMeetup
 {
+    use ValueObjectTrait;
+
     /**
      * Parameters to use when requesting group events from Meetup.com
      */
@@ -39,13 +41,6 @@ class NextMeetup
     private $client;
 
     /**
-     * A transformer for converting method names to camelCase
-     *
-     * @var CaseTransformerInterface
-     */
-    private $caseTransformer;
-
-    /**
      * Creates an object representing the next event by loading data from Meetup.com
      *
      * @param AbstractMeetupClient $client The client to use for Meetup.com requests
@@ -56,30 +51,13 @@ class NextMeetup
         CaseTransformerInterface $caseTransformer
     ) {
         $this->client = $client;
-        $this->caseTransformer = $caseTransformer;
+        $this->setCaseTransformer($caseTransformer);
 
         try {
             $this->nextMeetupDetails = $this->loadNextMeetup($client);
         } catch (\Exception $e) {
             // Do nothing. The allows the NextMeetup to return null for requested data.
         }
-    }
-
-    /**
-     * Proxy method calls to an ArrayValueObject for looking up data
-     *
-     * @param string $method The name of the invoked method
-     * @param array $args An array of arguments for the invoked method
-     * @return mixed
-     */
-    public function __call(string $method, array $args)
-    {
-        $valueObject = new ArrayValueObject(
-            $this->getNextMeetupDetails(),
-            $this->getCaseTransformer()
-        );
-
-        return $valueObject->{$method}(...$args);
     }
 
     /**
@@ -93,13 +71,13 @@ class NextMeetup
     }
 
     /**
-     * Returns the case transformer used to convert camelCase to snake_case
+     * Returns the raw array of data for the value object
      *
-     * @return CaseTransformerInterface
+     * @return array
      */
-    public function getCaseTransformer(): CaseTransformerInterface
+    public function getData(): array
     {
-        return $this->caseTransformer;
+        return $this->getNextMeetupDetails();
     }
 
     /**
