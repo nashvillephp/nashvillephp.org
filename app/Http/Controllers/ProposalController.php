@@ -4,11 +4,14 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTalkProposal;
+use App\Mail\ProposalConfirmation;
+use App\Mail\ProposalReceived;
 use App\TalkProposal;
 use Camel\CaseTransformer;
 use Google_Service_Sheets;
 use Google_Service_Sheets_ValueRange;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\View\View;
 
 class ProposalController extends Controller
@@ -38,16 +41,23 @@ class ProposalController extends Controller
 
         $proposal = new TalkProposal($request, $caseTransformer);
 
+        $sheet = $sheetsService->spreadsheets->get(
+            config('google.proposals_spreadsheet_id')
+        );
+
         $values = new Google_Service_Sheets_ValueRange([
             'values' => [$proposal->getArrayForGoogleSheet()],
         ]);
 
-        $result = $sheetsService->spreadsheets_values->append(
+        $sheetsService->spreadsheets_values->append(
             config('google.proposals_spreadsheet_id'),
             'A1:J1',
             $values,
             ['valueInputOption' => 'USER_ENTERED']
         );
+
+        Mail::to($proposal->getSpeakerEmail())->send(new ProposalConfirmation($proposal));
+        Mail::to(config('mail.proposals.address'))->send(new ProposalReceived($sheet, $proposal));
 
         return redirect('speak')->with('talkSubmission', 1);
     }

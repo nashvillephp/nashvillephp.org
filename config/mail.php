@@ -2,6 +2,8 @@
 
 return [
 
+    'signature' => "Cheers,\n\nMatt, Marcus, Rachel, and Ben  \nNashville PHP Organizers",
+
     /*
     |--------------------------------------------------------------------------
     | Mail Driver
@@ -58,6 +60,15 @@ return [
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
+    ],
+
+    'replyTo' => [
+        'address' => env('MAIL_REPLY_TO_ADDRESS'),
+        'name' => env('MAIL_REPLY_TO_NAME'),
+    ],
+
+    'proposals' => [
+        'address' => env('MAIL_PROPOSALS_ADDRESS'),
     ],
 
     /*
