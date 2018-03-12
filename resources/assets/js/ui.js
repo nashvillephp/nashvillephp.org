@@ -6,3 +6,9 @@ $(document).ready(function(){
 
     });
 });
+
+// Populate file input labels with the name of the file selected
+$('.custom-file-input').on('change', function() {
+   let fileName = $(this).val().split('\\').pop();
+   $(this).next('.custom-file-label').addClass("selected").html(fileName);
+});
