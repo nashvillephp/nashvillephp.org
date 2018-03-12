@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTalkProposal;
+use App\TalkProposal;
+use Camel\CaseTransformer;
 use Google_Service_Sheets;
 use Google_Service_Sheets_ValueRange;
 use Illuminate\Http\RedirectResponse;
@@ -30,23 +32,14 @@ class ProposalController extends Controller
      */
     public function processProposal(
         StoreTalkProposal $request,
-        Google_Service_Sheets $sheetsService
+        Google_Service_Sheets $sheetsService,
+        CaseTransformer $caseTransformer
     ): RedirectResponse {
 
-        $values = [
-            $request->input('name'),
-            $request->input('title'),
-            gmdate('Y-m-d H:i:s'),
-            $request->input('email'),
-            $request->input('bio'),
-            '',
-            $request->input('abstract'),
-            $request->input('availability', ''),
-            $request->input('notes', ''),
-        ];
+        $proposal = new TalkProposal($request, $caseTransformer);
 
         $values = new Google_Service_Sheets_ValueRange([
-            'values' => [$values],
+            'values' => [$proposal->getArrayForGoogleSheet()],
         ]);
 
         $result = $sheetsService->spreadsheets_values->append(
