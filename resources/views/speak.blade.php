@@ -30,14 +30,30 @@
                             </div>
                         @endif
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis arcu ut lacus maximus consectetur. Praesent mattis, augue imperdiet ornare ornare, urna eros cursus dui, a vehicula odio lectus et neque. Curabitur at cursus elit. Quisque ac erat fermentum, varius lectus in, tincidunt orci.</p>
+                        <p>We are looking for beginner, intermediate, and advanced topics. Whether you’re new to speaking or have many years under your belt, help out your fellow PHP developers, and share something you’ve learned.</p>
+
+                        <h3>New to speaking?</h3>
+                        <p>No worries. We’ve got your back. Speaking at a user group is a great way to build confidence and experience in public speaking and technical presentation.</p>
+                        <p>We’d love for you to speak, and we can pair you with a seasoned speaker who can help make sure you’re prepared to give your first talk. Let us know if this interests you.</p>
+
+                        <h3>Need a few ideas?</h3>
+                        <p>Not convinced you have a good idea for a talk? Here are a few ideas to get you thinking about what you can share, but don’t limit yourself to these.</p>
+                        <ul>
+                            <li>Encounter a head-scratching bug? Share how you solved it.</li>
+                            <li>Find a cool library or tool? Teach us how to use it.</li>
+                            <li>Passionate about team building? Let us know how your team works.</li>
+                            <li>Discover a neat PHP trick? Show us how it works.</li>
+                        </ul>
+                        <p>If you’re still not sure, or if you have any questions, don’t hesitate to get in touch. Send us an email at <a href="mailto:organizers@nashvillephp.org">organizers@nashvillephp.org</a>.</p>
+
+                        <hr>
+
+                        <h2>Submit a talk proposal</h2>
 
                         <form method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             <fieldset>
-
-                                <legend>Submit a talk proposal</legend>
 
                                 <div class="form-group">
                                     <label for="speakerName">Your Name</label>
@@ -78,14 +94,14 @@
                                     <label for="talkAbstract">Talk Abstract</label>
                                     <textarea id="talkAbstract" name="abstract" rows="6" class="form-control {{ $errors->has('abstract') ? 'is-invalid' : '' }}" aria-describedby="talkAbstractHelp">{{ old('abstract') }}</textarea>
                                     <div class="invalid-feedback">{{ $errors->first('abstract') }}</div>
-                                    <small id="talkAbstractHelp" class="form-text text-muted">An abstract is a brief description of your talk and what it will cover. For help creating your abstract, check out <a href="https://helpmeabstract.com/">Help Me Abstract</a>.</small>
+                                    <small id="talkAbstractHelp" class="form-text text-muted">An abstract is a brief description of your talk and what it will cover. For help creating your abstract, check out <a href="https://helpmeabstract.com/" target="_blank">Help Me Abstract</a>.</small>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="talkAvailability">When are you available to give this talk?</label>
                                     <input id="talkAvailability" name="availability" value="{{ old('availability') }}" type="text" class="form-control {{ $errors->has('availability') ? 'is-invalid' : '' }}" aria-describedby="talkAvailabilityHelp">
                                     <div class="invalid-feedback">{{ $errors->first('availability') }}</div>
-                                    <small id="talkAvailabilityHelp" class="form-text text-muted">Our meetings are always the second Tuesday of each month. In what future month(s) are you available to present this talk?</small>
+                                    <small id="talkAvailabilityHelp" class="form-text text-muted">Our meetings are always the second Tuesday of each month. In what future month(s) are you available to present this talk? Examples: January 2016, Summer, Anytime.</small>
                                 </div>
 
                                 <div class="form-group">
