@@ -1,37 +1,10 @@
 .page-content-cont {
-    background-image: url(../images/angle-blue1.svg);
-    background-repeat: no-repeat;
-    background-position: -80% -1%;
-    background-size: 70%;
-}
-
-@media (max-width: 1100px) {
-    .page-content-cont {
-        background-position: -100% -1%;
-    }
-}
-
-@media (min-width: 1300px) {
-    .page-content-cont {
-        background-position: -60% -1%;
-    }
-}
-
-@media (max-width: 991px) {
-    .page-content-cont {
-        margin-top: -1px;
-    }
-}
-
-@media (min-width: 1600px) {
-    .page-content-cont {
-        background: $gray-lightest;
-    }
+    @extend .bg-blog;
 }
 
 .page-content {
     position: relative;
-    z-index: 10;
+    z-index: -99;
     background-color: white;
     padding-bottom: 6rem;
     margin-top: 0px;
@@ -68,6 +41,11 @@ $pagemargin-xs: 1.5rem;
 
 .page-text {
     padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    .page-bar + & {
+        padding-top: 0;
+    }
 
     h1, h2, h3, h4, h5 {
         color: $gray;
