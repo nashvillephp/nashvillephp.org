@@ -14,48 +14,30 @@ use League\CommonMark\Converter as MarkdownConverter;
 class PageController extends Controller
 {
     /**
-     * @var MeetupKeyAuthClient
-     */
-    private $meetupClient;
-
-    /**
-     * @var CaseTransformer
-     */
-    private $caseTransformer;
-
-    /**
+     * The root home page
+     *
      * @param MeetupKeyAuthClient $meetupClient
      * @param CaseTransformer $caseTransformer
      * @param MarkdownConverter $markdownConverter
+     * @return View
      */
-    public function __construct(
+    public function home(
         MeetupKeyAuthClient $meetupClient,
         CaseTransformer $caseTransformer,
         MarkdownConverter $markdownConverter
-    ) {
-        $this->meetupClient = $meetupClient;
-        $this->caseTransformer = $caseTransformer;
-        $this->markdownConverter = $markdownConverter;
-    }
+    ): View {
 
-    /**
-     * The root home page
-     *
-     * @return View
-     */
-    public function home(): View
-    {
         try {
-            $nextLunch = new NextLunch($this->meetupClient, $this->caseTransformer);
+            $nextLunch = new NextLunch($meetupClient, $caseTransformer);
         } catch (MeetupNotFoundException $e) {
             $nextLunch = null;
         }
 
         return view('home', [
-            'markdown' => $this->markdownConverter,
+            'markdown' => $markdownConverter,
             'nextMeetup' => new NextMeetup(
-                $this->meetupClient,
-                $this->caseTransformer
+                $meetupClient,
+                $caseTransformer
             ),
             'nextLunch' => $nextLunch,
         ]);
