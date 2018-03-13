@@ -51,18 +51,21 @@ class ProcessProposalFormDataTest extends TestCase
         ];
 
         $response = $this->post('/speak', $input);
+        $response->assertStatus(302);
 
         Mail::assertSent(ProposalConfirmation::class, function ($mail) use ($input) {
-            return $mail->hasTo($input['email']);
-                //&& $mail->hasReplyTo(config('mail.replyTo.address'))
-                //&& $mail->hasSubject('Your Nashville PHP Talk Proposal: ' . $input['title']);
+            $mail->build();
+            return $mail->hasTo($input['email'])
+                && $mail->hasReplyTo(config('mail.replyTo.address'))
+                && $mail->subject === 'Your Nashville PHP Talk Proposal: ' . $input['title'];
         });
 
         Mail::assertSent(ProposalReceived::class, function ($mail) use ($input) {
-            return $mail->hasTo(config('mail.proposals.address'));
-                //&& $mail->hasReplyTo($input['email'])
-                //&& $mail->hasReplyTo(config('mail.replyTo.address'))
-                //&& $mail->hasSubject('New Talk Proposal: ' . $input['title']);
+            $mail->build();
+            return $mail->hasTo(config('mail.proposals.address'))
+                && $mail->hasReplyTo($input['email'])
+                && $mail->hasReplyTo(config('mail.replyTo.address'))
+                && $mail->subject === 'New Talk Proposal: ' . $input['title'];
         });
     }
 }
