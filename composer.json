@@ -5,11 +5,13 @@
     "type": "project",
     "require": {
         "php": "^7.2",
+        "aws/aws-sdk-php": "^3.52",
         "dms/meetup-api-client": "^2.3",
         "fideloper/proxy": "^3.3",
         "google/apiclient": "^2.2",
         "graham-campbell/markdown": "^9.0",
         "laravel/framework": "5.5.*",
+        "league/flysystem-aws-s3-v3": "^1.0",
         "mattketmo/camel": "^1.1"
     },
     "require-dev": {

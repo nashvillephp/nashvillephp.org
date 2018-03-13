@@ -46,6 +46,17 @@ class TalkProposal
     }
 
     /**
+     * Sets the speaker photo URL
+     *
+     * @param string $url
+     * @return void
+     */
+    public function setSpeakerPhotoUrl(string $url): void
+    {
+        $this->proposalDetails['speaker_photo_url'] = $url;
+    }
+
+    /**
      * Returns the raw array of proposal details
      *
      * @return array
@@ -68,7 +79,7 @@ class TalkProposal
             $this->getSubmissionDate(),
             $this->getSpeakerEmail(),
             $this->getSpeakerBio(),
-            $this->getSpeakerPhotoUrl(),
+            '=IMAGE("' . $this->getSpeakerPhotoUrl() . '")',
             $this->getTalkAbstract(),
             $this->getSpeakerAvailability(),
             $this->getSpeakerNotes(),

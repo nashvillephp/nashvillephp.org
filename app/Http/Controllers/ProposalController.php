@@ -12,6 +12,8 @@ use Google_Service_Sheets;
 use Google_Service_Sheets_ValueRange;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class ProposalController extends Controller
@@ -40,6 +42,18 @@ class ProposalController extends Controller
     ): RedirectResponse {
 
         $proposal = new TalkProposal($request, $caseTransformer);
+
+        if ($request->hasFile('avatar') && $request->file('avatar')->isValid()) {
+            $path = $request->avatar->store(
+                'uploads/proposals/' . Str::slug($proposal->getSpeakerName()),
+                [
+                    'visibility' => 'public',
+                    'StorageClass' => 'STANDARD_IA',
+                ]
+            );
+
+            $proposal->setSpeakerPhotoUrl(Storage::url($path));
+        }
 
         $sheet = $sheetsService->spreadsheets->get(
             config('google.proposals_spreadsheet_id')

@@ -34,7 +34,7 @@ feel free to reply to this message.
 ## Your Picture
 
 @if ($proposal->getSpeakerPhotoUrl())
-{{ $proposal->getSpeakerPhotoUrl() }}
+<img src="{{ $proposal->getSpeakerPhotoUrl() }}" style="max-height:200px;max-width:200px;height:auto;width:auto;">
 @else
 *No photo uploaded.*
 @endif
