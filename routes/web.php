@@ -12,6 +12,9 @@
 */
 
 Route::get('/', 'PageController@home')->name('home');
+Route::get('/about', 'PageController@about')->name('about');
+Route::get('/sponsors', 'PageController@sponsors')->name('sponsors');
+Route::get('/speakers', 'PageController@speakers')->name('speakers');
 Route::get('/speak', 'ProposalController@proposalForm')->name('speak');
 Route::post('/speak', 'ProposalController@processProposal');
 

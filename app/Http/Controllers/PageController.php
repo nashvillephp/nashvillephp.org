@@ -42,4 +42,19 @@ class PageController extends Controller
             'nextLunch' => $nextLunch,
         ]);
     }
+
+    public function about(): View
+    {
+        return view('about');
+    }
+
+    public function sponsors(): View
+    {
+        return view('sponsors');
+    }
+
+    public function speakers(): View
+    {
+        return view('speakers');
+    }
 }
