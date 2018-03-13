@@ -58,11 +58,12 @@ installed):
     composer install
 
 Before you're able to run the website, you'll need to set up some environment
-variables. Copy `.env.example` to `.env`, generate an app key, and add your
-Meetup.com API Key:
+variables. Copy `.env.example` to `.env`, generate an app key, link local
+storage for file uploads, and add your Meetup.com API Key:
 
     cp .env.example .env
     php artisan key:generate
+    php artisan storage:link
 
 Go to <https://secure.meetup.com/meetup_api/key/> and copy your Meetup.com API
 key. Then, edit `.env` and paste the API key as the value for `MEETUP_API_KEY`:
@@ -96,6 +97,11 @@ Leave it running in your terminal and browse to the website at
 While it's running, [Laravel Mix][] watches all your files, and regenerates
 assets in the `public/` directory every time a change is made. Meanwhile,
 [Browsersync][] refreshes the pages in your browser automatically.
+
+You may tail the log to see any emails that are sent during development
+(`.env.example` is set up to use the `log` driver for email messages):
+
+    tail -n 100 storage/logs/laravel.log
 
 That's it! Now, you're ready to develop locally. When you're ready, push your
 branch to your fork, and [open a pull request][].
