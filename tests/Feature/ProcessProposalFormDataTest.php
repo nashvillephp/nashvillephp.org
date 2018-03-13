@@ -40,7 +40,6 @@ class ProcessProposalFormDataTest extends TestCase
         $this->app->instance(Google_Service_Sheets::class, $sheetsService);
 
         $input = [
-            '_token' => csrf_token(),
             'name' => 'Frodo Baggins',
             'email' => 'frodo@example.com',
             'bio' => 'I am the Ring Bearer.',
