@@ -27,6 +27,11 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="APP_NAME" value="Nashville PHP"/>
+        <env name="APP_DEBUG" value="true"/>
+        <env name="APP_LOG_LEVEL" value="debug"/>
+        <env name="APP_URL" value="http://localhost"/>
+        <env name="MAIL_DRIVER" value="log"/>
         <env name="MAIL_PROPOSALS_ADDRESS" value="proposals@example.com"/>
         <env name="MAIL_REPLY_TO_ADDRESS" value="reply@example.com"/>
     </php>
