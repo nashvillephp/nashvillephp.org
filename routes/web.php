@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'IndexController@home')->name('home');
+Route::get('/', 'PageController@home')->name('home');
 Route::get('/speak', 'ProposalController@proposalForm')->name('speak');
 Route::post('/speak', 'ProposalController@processProposal');
 

@@ -11,7 +11,7 @@ use App\Exceptions\MeetupNotFoundException;
 use Illuminate\View\View;
 use League\CommonMark\Converter as MarkdownConverter;
 
-class IndexController extends Controller
+class PageController extends Controller
 {
     /**
      * @var MeetupKeyAuthClient
