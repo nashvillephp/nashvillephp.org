@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Home');
+
 @section('content')
 <!-- START OF HERO -->
 <div class="container-fluid bg-blue">
