@@ -20,12 +20,13 @@ class ProcessProposalFormDataTest extends TestCase
         $response = $this->get('/speak');
 
         $response->assertStatus(200);
-        $response->assertSeeText('Speak at Nashville PHP!');
+        $response->assertSeeText('Give a Talk');
     }
 
     public function testProcessFormData()
     {
         Mail::fake();
+        Storage::fake();
 
         $sheetsService = Mockery::mock(Google_Service_Sheets::class);
 
@@ -52,6 +53,9 @@ class ProcessProposalFormDataTest extends TestCase
 
         $response = $this->post('/speak', $input);
         $response->assertStatus(302);
+
+        $files = Storage::disk()->allFiles('uploads/proposals/frodo-baggins');
+        $this->assertCount(1, $files);
 
         Mail::assertSent(ProposalConfirmation::class, function ($mail) use ($input) {
             $mail->build();

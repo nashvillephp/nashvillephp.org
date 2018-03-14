@@ -86,7 +86,7 @@ class TalkProposalTest extends TestCase
             $date,
             $input['email'],
             $input['bio'],
-            '',
+            '=IMAGE("http://example.com/photo.jpg")',
             $input['abstract'],
             $input['availability'],
             $input['notes'],
@@ -103,6 +103,7 @@ class TalkProposalTest extends TestCase
         $caseTransformer = new CaseTransformer(new CamelCase(), new SnakeCase());
 
         $proposal = new TalkProposal($request, $caseTransformer);
+        $proposal->setSpeakerPhotoUrl('http://example.com/photo.jpg');
 
         $this->assertSame($expected, $proposal->getArrayForGoogleSheet());
     }

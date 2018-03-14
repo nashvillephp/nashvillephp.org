@@ -48,11 +48,16 @@
         }
     },
     "scripts": {
-        "coverage-html": "phpunit --verbose --colors=always --coverage-html=build/coverage",
+        "config-clear": "@php artisan config:clear",
+        "coverage-html": [
+            "@config-clear",
+            "phpunit --verbose --colors=always --coverage-html=build/coverage"
+        ],
         "lint": "parallel-lint --exclude vendor .",
         "phpunit": "phpunit --verbose --colors=always",
         "phpcs": "phpcs --standard=psr2 -sp --colors app config routes tests",
         "test": [
+            "@config-clear",
             "@lint",
             "@phpunit",
             "@phpcs"
