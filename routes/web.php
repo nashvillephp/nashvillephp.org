@@ -13,13 +13,14 @@
 
 $cacheTtl = [
     '12hours' => 60 * 12,
+    'hour' => 60,
     'day' => 60 * 24,
     'week' => 60 * 24 * 7,
 ];
 
 Route::get('/', 'PageController@home')
     ->name('home')
-    ->middleware("cacheResponse:{$cacheTtl['12hours']}");
+    ->middleware("cacheResponse:{$cacheTtl['hour']}");
 
 Route::middleware(["cacheResponse:{$cacheTtl['week']}"])->group(function () {
     Route::get('/about', 'PageController@about')->name('about');
