@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-    @if (getenv('APP_ENV') === 'production')
+    @if (config('app.env') === 'production')
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114740882-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -117,7 +117,7 @@
     <script src="{{ mix('/js/vendor.js') }}"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
 
-    @if (getenv('APP_ENV') === 'local')
+    @if (config('app.env') === 'local')
     <script id="__bs_script__">
         document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.23.5'><\/script>".replace("HOST", location.hostname));
     </script>
