@@ -124,7 +124,7 @@ using Ubuntu or Debian, you may install these with `apt-get`:
 
 The following must pass before we will accept a pull request. If this does not pass, it will result in a complete build failure. Before you can run this, be sure to `composer install`.
 
-To run all the tests and coding standards checks, execute the following from the command line, while in the project root directory (the came place as the `composer.json` file):
+To run all the tests and coding standards checks, execute the following from the command line, while in the project root directory (the same place as the `composer.json` file):
 
     composer test
 
