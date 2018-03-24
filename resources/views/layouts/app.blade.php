@@ -103,6 +103,7 @@
                     <div class="col-md-4">
                         <div class="nash-sponsor">
                             <p>NashvillePHP is sponsored by:</p>
+                            <a href=""><img src="https://cdn1.ykso.co/img/sites/opensky/logo.svg" alt="opensky logo"></a>
                             <a href="http://www.cakedc.com"><img src="{{ asset('images/logo-cakedc.svg') }}"></a>
                         </div>
                     </div>
