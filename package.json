@@ -15,7 +15,7 @@
         "serve": "npm run watch-poll & php artisan serve"
     },
     "devDependencies": {
-        "axios": "^0.17",
+        "axios": "^0.21",
         "bootstrap": "^4.0.0",
         "browser-sync": "^2.23.6",
         "browser-sync-webpack-plugin": "^2.0.1",
