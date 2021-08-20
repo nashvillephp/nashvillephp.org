@@ -4,7 +4,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.2",
+        "php": "~7.2.33",
         "aws/aws-sdk-php": "^3.52",
         "dms/meetup-api-client": "^2.3",
         "fideloper/proxy": "^3.3",
