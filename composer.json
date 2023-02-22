@@ -3,7 +3,7 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": "^8.2"
+        "php": "^8.1"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "^231.0"
